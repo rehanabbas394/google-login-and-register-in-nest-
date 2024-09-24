@@ -7,14 +7,14 @@ import { AuthService } from './auth.service';
 export class GoogleStrategy extends PassportStrategy(Strategy, 'google') {
   constructor(private authService: AuthService) {
     super({
-      clientID: '995075343578-rkt5krqhv70mo9q5iir75r0245tc7sfm.apps.googleusercontent.com',
-      clientSecret: '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',
-      callbackURL: 'http://localhost:3000/auth/google/callback',
+      clientID: process.env.CLIENT_ID,
+      clientSecret: process.env.CLIENT_SECRET,
+      callbackURL: process.env.CALLBACK_URL,
       scope: ['email', 'profile'],
     });
   }
 
-  
+
   async validate(
     accessToken: string,
     profile: any,
