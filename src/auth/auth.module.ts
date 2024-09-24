@@ -13,7 +13,7 @@ import { UsersModule } from '../user/user.module';
       secret: '87skl32jknsmn', 
       signOptions: { expiresIn: '1h' },
     }),
-    UsersModule,
+    UsersModule
   ],
   controllers: [AuthController],
   providers: [AuthService, GoogleStrategy],

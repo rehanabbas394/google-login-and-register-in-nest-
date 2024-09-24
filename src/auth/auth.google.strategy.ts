@@ -14,6 +14,7 @@ export class GoogleStrategy extends PassportStrategy(Strategy, 'google') {
     });
   }
 
+  
   async validate(
     accessToken: string,
     profile: any,

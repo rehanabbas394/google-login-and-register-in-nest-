@@ -8,7 +8,6 @@ export class AuthService {
     private readonly usersService: UsersService,
     private readonly jwtService: JwtService,
   ) {}
-
   async registerWithGoogle(user: any): Promise<any> {
     let existingUser = await this.usersService.findOneByEmail(user.email);
 
